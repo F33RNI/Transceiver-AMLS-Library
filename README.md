@@ -5,7 +5,7 @@ Library usage example:
 ```cpp
 #include "Transceiver.h"	//Include library
 
-Transceiver transceiver(SERIAL_PORT, SERIAL_BODRATE, SERIAL_BITS, SERIAL_STOP_BITS);	//Init UART settings
+Transceiver transceiver("\\\\.\\COM9", 9600, 8, 0);	//Init UART settings
 
 void uart_callback(char* data) {	//This function is called every time the symbol "\n" or "\r" appears in the incoming message.
 	printf(data);	//Print message to console
